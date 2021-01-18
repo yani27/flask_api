@@ -14,3 +14,4 @@ Flask-RESTful
 Psycopg2
 Flask-Migrate
 gunicorn
+autoenv
