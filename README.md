@@ -1,4 +1,8 @@
-## setup api with docker and heroku
+## Flask plugin with docker and heroku
+
+<h4> postgresql </h4>
+
+- create database psql named flask_api
 
 <h4> for docker </h4>
 - docker-compose up --build
