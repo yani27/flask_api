@@ -1,0 +1,11 @@
+version: "3"
+services:
+  web:
+    build: .
+    ports:
+      - "0.0.0.0:8008:5000"
+    command: bash -c  "python3 run.py"
+    volumes:
+      - .:/code
+    stdin_open: true
+    tty: true
