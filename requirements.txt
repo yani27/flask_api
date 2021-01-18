@@ -11,5 +11,6 @@ WTForms==2.3.3
 flask-markdown
 flask-cors
 Flask-RESTful
-Flask-JWT-Extended
-passlib
+Psycopg2
+Flask-Migrate
+gunicorn
