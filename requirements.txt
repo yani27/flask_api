@@ -15,3 +15,5 @@ Psycopg2
 Flask-Migrate
 gunicorn
 autoenv
+python-dotenv
+Flask-Script
