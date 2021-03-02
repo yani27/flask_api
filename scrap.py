@@ -29,11 +29,17 @@ for item in range(len(container)):
     league_title = container[item].find(
         "h3", {"class": "gel-minion sp-c-match-list-heading"})
 
-    adv1 = container[item].findAll("span", {
-        "class": "gs-u-display-none gs-u-display-block@m qa-full-team-name sp-c-fixture__team-name-trunc"})
-
-    print("leaque {} : {}".format(item, league_title.text))
+    # print("leaque {} : {}".format(item, league_title.text))
     # print("adverss : ", adv1.text.encode('utf-8'))
 
-    # for i in range(len(adv1)):
-    #     print("adv {} : {}".format(i, adv1.text.encode('utf-8')))
+    adv = container[item].findAll("span", {
+        "class": "gs-u-display-none gs-u-display-block@m qa-full-team-name sp-c-fixture__team-name-trunc"})
+
+    time = container[item].find(
+        "span", {"class": "sp-c-fixture__number sp-c-fixture__number--time"})
+
+    print("len in adv = ", len(adv))
+    print("len in tima = ", len(time))
+
+    # for i in range(len(adv)):
+    #     print("adv {} : {}".format(i, adv[i].text.encode('utf-8')))
