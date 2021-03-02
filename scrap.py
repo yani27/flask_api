@@ -15,6 +15,7 @@ url = 'https://www.bbc.com/sport/football/scores-fixtures'
 
 BASE_DIRECTORY = os.path.abspath(os.path.dirname(__file__))
 JSON_FILE = os.path.join(BASE_DIRECTORY, 'data_json.json')
+
 result_list = []
 result_dict = {}
 
@@ -41,12 +42,19 @@ for item in range(len(container)):
     k = 0
     for i in range(len(adv)):
         print("adv {} : {}".format(i, adv[i].text.encode('utf-8')))
+        result_dict['adv{}'.format(i)] = adv[i].text.encode('utf-8')
         k += 1
 
         if k == 2:
             try:
                 print("in time = {}".format(time.text.encode('utf-8')))
+                result_dict['time'] = time.text.encode('utf-8')
             except:
                 pass
             finally:
                 k = 0
+
+    result_list.append(result_dict)
+    break
+print("result_list : ", result_list)
+print('result dict ', result_dict)
