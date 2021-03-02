@@ -15,6 +15,8 @@ url = 'https://www.bbc.com/sport/football/scores-fixtures'
 
 BASE_DIRECTORY = os.path.abspath(os.path.dirname(__file__))
 JSON_FILE = os.path.join(BASE_DIRECTORY, 'data_json.json')
+result_list = []
+result_dict = {}
 
 req2 = requests.get(url)
 soup2 = BeautifulSoup(req2.text, 'html.parser')
